@@ -1,12 +1,13 @@
-# oCHAT
-
 <div align="center" >
-  <img alt="oChat messaging app Logo" style="height: 99px;" src="https://github.com/Oth-mane1/ochat/blob/master/src/images/ochat_logo_with_name.png" />
+  <img alt="oChat messaging app Logo" style="height: 166px;" src="https://github.com/Oth-mane1/ochat/blob/master/src/images/ochat_logo_with_name.png" />
 </div>
 
-🎲 Demo avaiable on :  https://reactroutertuto.netlify.app
+## 💬 oCHAT
 
-## Available Scripts
+## 🎲 Demo 
+Avaiable on :  https://reactroutertuto.netlify.app
+
+## 🧾 Available Scripts
 
 In the project directory, you can run:
 
@@ -30,8 +31,8 @@ Builds the app for production to the `build` folder.\
 Removes this tool and copies build dependencies, configuration files\
 and scripts into the app directory. If you do this, you can’t go back!
 
-## Contributing
+## 📝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
+## 🔑 License
 Please consider reading the license before any use [Apache License 2.0](https://github.com/Oth-mane1/chatoo/blob/master/LICENCE)
