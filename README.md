@@ -1,7 +1,7 @@
-# chatoo
+# oCHAT
 
 <div align="center" >
-  <img alt="Chato messaging app Logo" style="height: 99px;" src="" />
+  <img alt="oChat messaging app Logo" style="height: 99px;" src="https://github.com/Oth-mane1/ochat/blob/master/src/images/ochat_logo_with_name.png" />
 </div>
 
 🎲 Demo avaiable on :  https://reactroutertuto.netlify.app
