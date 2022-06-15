@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --jelly-bean-blue: #3A7B99;
+    --iceberg-blue: #70AFCE;
+    --nophoto-blue: #A5DEF1;
+}
+
+body {
+    font-family: 'Open Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+/* Ripple Button */
+.ripple-btn {
+    position: relative;
+    /* margin: .5rem; */
+    /* padding: .5rem 1rem; */
+    display: block;
+    border-radius: 33px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ripple-btn span.ripple-effect {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: ripples 0.666s linear infinite;
+}
+
+@keyframes ripples {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.222;
+    }
+
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+/* End Ripple Button */
