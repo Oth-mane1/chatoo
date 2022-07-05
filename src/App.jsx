@@ -1,10 +1,11 @@
 // import RippleButton from "./components/RippleButton";
-import Login from "./components/Login";
 import React from "react";
+import Auth from "./components/Auth";
+
 function App() {
 	return (
 		<div className="App">
-			<Login />
+			<Auth />
 		</div>
 	);
 }
