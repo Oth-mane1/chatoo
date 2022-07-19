@@ -12,15 +12,21 @@ body {
     font-family: 'Open Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
+Button:disabled {
+    cursor: no-drop;
+}
+
 /* Ripple Button */
 .ripple-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     /* margin: .5rem; */
     /* padding: .5rem 1rem; */
-    display: block;
     border-radius: 33px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .ripple-btn span.ripple-effect {
