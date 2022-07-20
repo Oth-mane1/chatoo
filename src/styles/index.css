@@ -6,6 +6,7 @@
     --jelly-bean-blue: #3A7B99;
     --iceberg-blue: #70AFCE;
     --nophoto-blue: #A5DEF1;
+    --backgroundColor: #fff;
 }
 
 body {
@@ -53,3 +54,125 @@ Button:disabled {
 }
 
 /* End Ripple Button */
+.line-wobble {
+    --uib-size: 123px;
+    --uib-speed: 1.75s;
+    --uib-color: var(--jelly-bean-blue);
+    --uib-line-weight: 5px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--uib-line-weight);
+    width: var(--uib-size);
+    border-radius: calc(var(--uib-line-weight) / 2);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.line-wobble::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--uib-color);
+    opacity: 0.1;
+}
+
+.line-wobble::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--uib-line-weight) / 2);
+    animation: wobble var(--uib-speed) ease-in-out infinite;
+    transform: translateX(-95%);
+    background-color: var(--uib-color);
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateX(-95%);
+    }
+
+    50% {
+        transform: translateX(95%);
+    }
+}
+
+#loader-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: var(--backgroundColor);
+    z-index: 10;
+}
+
+#loader {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: calc(50% - 125px/2);
+    right: calc(50% - 125px/2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader svg {
+    margin-bottom: 11px;
+}
+
+.inLoading {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.outLoading {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
+}
+
+/* .outLoading #loader-container{
+    display: none;
+  } */
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+/* End Loader */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-corner {
+    background-color: inherit
+}
+
+::-moz-selection {
+    background-color: var(--jelly-bean-blue);
+    color: #f0f0f0
+}
+
+::selection {
+    background-color: var(--jelly-bean-blue);
+    color: #f0f0f0
+}
+
+/* End Scrollbar */
