@@ -106,7 +106,7 @@ Button:disabled {
 
 #loader-container {
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
     position: absolute;
     background: var(--backgroundColor);
     z-index: 10;
