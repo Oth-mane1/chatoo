@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
+import { hideLoader } from "./Loader";
 
 const _3dSignUpImg = require("../images/signUp3dObjects.png");
 const _3dSignInImg = require("../images/signIn3dObjects.png");
@@ -8,6 +9,10 @@ const _3dSignInImg = require("../images/signIn3dObjects.png");
 export default function Auth(props) {
     const signState = useState(true);
     const [isSignIn, setIsSignIn] = signState;
+
+    useEffect(() => {
+        return () => hideLoader()
+    }, [isSignIn])
 
     return (
         <main className="flex h-screen bg-blue-jelly">
