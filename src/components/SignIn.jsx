@@ -1,9 +1,10 @@
 import { useState } from "react";
-import RippleButton from "./RippleButton";
+import { RippleButton } from "./RippleButton";
+import { showLoader } from "./Loader";
 
 export function SignIn(props) {
-	// const [isLoading, setIsLoading] = useState(false);
 	const [isSignIn, setIsSignIn] = props.signState;
+	const [isLoading, setIsLoading] = useState(false);
 
 	return (
 		<div className="w-4/6 m-auto h-screen flex items-center justify-center flex-col">
@@ -38,11 +39,12 @@ export function SignIn(props) {
 					<input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-jelly peer" placeholder=" " required />
 					<label htmlFor="floating_password" className="peer-focus:font-medium absolute text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-jelly peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
 				</div>
-				<RippleButton className="px-6 py-2 mt-3 text-lg text-white bg-blue-jelly hover:bg-blue-jelly focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg w-full sm:w-auto text-center">
+
+				<RippleButton click={()=>setIsLoading(true)} isLoading={isLoading} className="px-6 py-2 mt-3 text-lg text-white bg-blue-jelly hover:bg-blue-jelly hover:shadow-lg transition focus:ring-4 focus:outline-none focus:ring-blue-iceberg font-medium rounded-lg w-full sm:w-auto text-center">
 					Log In
 				</RippleButton>
 			</form>
-			<p className="w-full text-left">Don't have an account? no problem <button className="text-blue-jelly font-semibold" onClick={() => setIsSignIn(false)}>Sign Up</button> here.</p>
+			<p className="w-full text-left">Don't have an account? no problem <button className="text-blue-jelly font-semibold hover:underline" onClick={() => { showLoader(); setIsSignIn(false) }}>Sign Up</button> here.</p>
 		</div>
 	);
 }

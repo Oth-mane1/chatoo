@@ -1,7 +1,10 @@
-import RippleButton from "./RippleButton";
+import { RippleButton } from "./RippleButton";
+import { showLoader } from "./Loader";
+import { useState } from "react";
 
 export function SignUp(props) {
-	const [isSignIn, setIsSignIn] = props.signState;
+    const [isSignIn, setIsSignIn] = props.signState;
+    const [isLoading, setIsLoading] = useState(false);
 
     return (
         <div className="w-4/6 m-auto h-screen flex items-center justify-center flex-col">
@@ -56,11 +59,11 @@ export function SignUp(props) {
                         <label htmlFor="floating_repeat_password" className="peer-focus:font-medium absolute text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-jelly peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm password</label>
                     </div>
                 </div>
-                <RippleButton className="px-6 py-2 mt-3 text-lg text-white bg-blue-jelly transition hover:shadow-lg focus:ring-[3px] focus:outline-none focus:ring-blue-iceberg font-medium rounded-lg w-full sm:w-auto text-center">
+                <RippleButton click={()=>setIsLoading(true)} isLoading={isLoading} className="px-6 py-2 mt-3 text-lg text-white bg-blue-jelly hover:shadow-lg transition focus:ring-[3px] focus:outline-none focus:ring-blue-iceberg font-medium rounded-lg w-full sm:w-auto text-center">
                     Sign up
                 </RippleButton>
             </form>
-			<p className="w-full text-left">Already have an account? <button className="text-blue-jelly font-semibold" onClick={() => setIsSignIn(true)}>Log in</button>.</p>
+            <p className="w-full text-left">Already have an account? <button className="text-blue-jelly font-semibold hover:underline" onClick={() => {showLoader(); setIsSignIn(true)}}>Log in</button>.</p>
         </div>
     );
 }
