@@ -12,8 +12,8 @@ function showRippleButtonLoader(e) {
 
 function RippleButton(props) {
 	// const [isLoading, setIsLoading] = useState(false)
-	let isLoading = props.isLoading
-console.log(isLoading);
+	let isLoading = props.isLoading || false
+
 	function handleRippleEffect(e) {
 		let rippleEffect = document.createElement("span");
 		rippleEffect.classList.add("ripple-effect");
@@ -30,7 +30,8 @@ console.log(isLoading);
 			id={props?.id}
 			className={"ripple-btn " + props?.className}
 			style={props?.style}
-			type={props?.id || "button"}
+			type={props?.type || "button"}
+			disabled={isLoading}
 			onClick={(e) => {
 				handleRippleEffect(e);
 
