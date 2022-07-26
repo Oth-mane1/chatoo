@@ -8,7 +8,7 @@ export function SignIn(props) {
 
 	return (
 		<div className="w-4/6 m-auto h-screen flex items-center justify-center flex-col">
-			<h1 className="w-full text-left font-semibold text-gray-800 text-4xl">Welcome Back!</h1>
+			<h1 className="w-full text-left font-bold text-gray-800 text-4xl">Welcome Back!</h1>
 			<div className="w-full flex items-center justify-around font-semibold text-3xl my-5">
 				<div role={"button"} className="flex items-center justify-center my-1 p-2 px-3 rounded-3xl text-3xl border-2 group hover:bg-blue-jelly">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
