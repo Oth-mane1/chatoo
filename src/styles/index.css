@@ -8,13 +8,17 @@
     --nophoto-blue: #A5DEF1;
     --backgroundColor: #fff;
 }
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 body {
-    font-family: 'Open Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;    
 }
 
+h1 {
+    font-family: 'Work Sans', sans-serif;
+}
 Button:disabled {
-    cursor: no-drop;
+    cursor: not-allowed;
 }
 
 /* Ripple Button */
