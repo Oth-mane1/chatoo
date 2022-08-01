@@ -17,8 +17,10 @@ body {
 h1 {
     font-family: 'Work Sans', sans-serif;
 }
+
 Button:disabled {
     cursor: not-allowed;
+    opacity: .8;
 }
 
 /* Ripple Button */
@@ -58,6 +60,8 @@ Button:disabled {
 }
 
 /* End Ripple Button */
+
+/* Loader */
 .line-wobble {
     --uib-size: 123px;
     --uib-speed: 1.75s;
@@ -144,14 +148,9 @@ Button:disabled {
     transition: visibility 0s .5s, opacity .5s linear;
 }
 
-/* .outLoading #loader-container{
-    display: none;
-  } */
-
 .overflow-hidden {
     overflow: hidden !important;
 }
-
 /* End Loader */
 
 /* Scrollbar */
