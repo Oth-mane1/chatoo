@@ -1,6 +1,6 @@
 // import RippleButton from "./components/RippleButton";
 import React from "react";
-import Auth from "./components/Auth";
+import Auth from "./components/auth/Auth";
 
 function App() {
 	return (
