@@ -3,9 +3,9 @@ import { SignIn } from "./SignIn";
 import { SignUp } from "./SignUp";
 import { hideLoader } from "../utils/Loader";
 
-const _3dSignUpImg = require("../../images/signUp3dObjects.png");
-const _3dSignInImg = require("../../images/signIn3dObjects.png");
-const _ochat_logo = require("../../images/ochatLogo.png");
+const _3dSignUpImg = require("../../images/objects/signUp3dObjects.png");
+const _3dSignInImg = require("../../images/objects/signIn3dObjects.png");
+const _ochat_logo = require("../../images/logo/ochatLogo.png");
 
 export default function Auth(props) {
     const signState = useState(true);
