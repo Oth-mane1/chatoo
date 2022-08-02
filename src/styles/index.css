@@ -179,3 +179,12 @@ Button:disabled {
 }
 
 /* End Scrollbar */
+
+/* Ochat App */
+#o-header {
+    height: 4rem;
+}
+#o-main {
+    height: calc(100vh - 4rem);
+}
+/* End Ochat App */
