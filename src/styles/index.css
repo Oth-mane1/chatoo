@@ -188,3 +188,7 @@ Button:disabled {
     height: calc(100vh - 4rem);
 }
 /* End Ochat App */
+
+/* * {
+    border: 1px solid #3A7B9930 !important;
+} */
