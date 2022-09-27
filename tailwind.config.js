@@ -9,7 +9,7 @@ module.exports = {
         blue: {
           "jelly": '#3A7B99',
           "iceberg": '#70AFCE',
-          "nophoto ": '#A5DEF1',
+          "nophoto": '#A5DEF1',
         }
       }
     },
