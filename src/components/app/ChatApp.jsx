@@ -10,8 +10,8 @@ function Ochat(props) {
     const [userselected, setUserselected] = userSelectedState;
 
     useEffect(() => {
-        return () => hideLoader()
-    }, [])
+        return () => (!props.loading ?? true) && hideLoader()
+    })
 
     return (
         <main id="o-app" className="w-full h-screen bg-gray-200">
