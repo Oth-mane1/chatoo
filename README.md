@@ -1,5 +1,5 @@
 <div align="center" >
-  <img alt="oChat messaging app Logo" style="height: 166px;" src="https://github.com/Oth-mane1/ochat/blob/master/src/images/ochat_logo_with_name.png" />
+  <img alt="oChat messaging app Logo" style="height: 166px;" src="https://github.com/Oth-mane1/ochat/blob/master/src/images/logo/ochat_logo_with_name.png" />
 </div>
 
 ## 💬 oCHAT
