@@ -1,6 +1,7 @@
 import { User, UserGroup, Settings, LogOut } from './../utils/icons'
 import { Menu, Transition } from '@headlessui/react'
 import React, { Fragment, useId } from "react";
+import { SignOut } from "./../auth/Authenticator";
 
 const OCHAT_LOGO = require('./../../images/logo/ochatLogo.png');
 const USER_AVATAR = false ? '' : require('./../../images/avatars/men_smiling_avatar.png');
@@ -29,10 +30,10 @@ function Header(props) {
                     >
                         <Menu.Items className="absolute right-0 p-1 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-2xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                             {
-                                [["Profil", <User className="w-6 h-6" />], ["Friends", <UserGroup className="w-6 h-6" />], ["Setting", <Settings className="w-6 h-6" />], ["LogOut", <LogOut className="w-6 h-6" />]].map(([menu, icon], key) => {
+                                [["Profil", <User className="w-6 h-6" />], ["Friends", <UserGroup className="w-6 h-6" />], ["Setting", <Settings className="w-6 h-6" />], ["LogOut", <LogOut className="w-6 h-6" />, {onClick: SignOut()}]].map(([menu, icon, events], key) => {
                                     return (
                                         <Menu.Item key={key}>
-                                            <button className={'w-full flex items-center font-semibold rounded-xl px-2 py-2 text-sm hover:bg-blue-jelly hover:text-white'} >                                                
+                                            <button {...events} className={'w-full flex items-center font-semibold rounded-xl px-2 py-2 text-sm hover:bg-blue-jelly hover:text-white'} >                                                
                                                 <span className='mr-2'>
                                                     {icon}
                                                 </span>
