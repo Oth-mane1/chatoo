@@ -1,14 +1,21 @@
-import React from "react";
-// import Auth from "./components/auth/Auth";
+import { showLoader, hideLoader } from "./components/utils/Loader";
+import Auth from "./components/auth/Auth";
 import Ochat from "./components/app/ChatApp";
+import { IsUserAuthentified } from "./components/auth/Authenticator";
+import { useEffect } from "react";
 
 function App() {
-	return (
-		<div className="App">
-			{/* <Auth /> */}
-			<Ochat />
-		</div>
-	);
+  const [userAuthentified, loading, err] = IsUserAuthentified()
+
+  useEffect(() => {
+    !loading && hideLoader()
+  })
+
+  return (
+    <div className="App">
+      {userAuthentified ? <Ochat loading={loading} /> : <Auth loading={loading} />}
+    </div>
+  );
 }
 
 export default App;
